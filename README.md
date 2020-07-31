@@ -2,6 +2,8 @@
 
 Managing aide.
 
+[![Build Status](https://travis-ci.org/Caseraw/ansible_role_aide.svg?branch=master)](https://travis-ci.org/Caseraw/ansible_role_aide) [<img src="https://img.shields.io/ansible/role/49979">](https://galaxy.ansible.com/caseraw/ansible_role_aide) [<img src="https://img.shields.io/ansible/role/d/49979">](https://galaxy.ansible.com/caseraw/ansible_role_aide) [<img src="https://img.shields.io/ansible/quality/49979">](https://galaxy.ansible.com/caseraw/ansible_role_aide)
+
 - [Ansible role service manager](#ansible-role-service-manager)
   - [License](#license)
   - [Author Information](#author-information)
