@@ -50,7 +50,9 @@ Compatible with the following list of operating systems:
 
 | Variable name | Description |
 |---------------|-------------|
-| role_servicemanager_required_package_list | A list containing service details. |
+| role_aide_packages | A list of packages to install. |
+| role_aide_db | Path to aide db. |
+| role_aide_new | Path to new aide db. |
 
 ## Example Playbook
 
