@@ -1,0 +1,11 @@
+---
+### Software packages required for installing aide.
+role_aide_packages:
+  - cronie
+  - aide
+
+### Paths to aide databases.
+role_aide_db: /var/lib/aide/aide.db.gz
+role_aide_new: /var/lib/aide/aide.db.new.gz
+
+...

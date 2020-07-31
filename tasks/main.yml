@@ -1,0 +1,30 @@
+---
+- name: Ensure aide is installed
+  package:
+    name: '{{ role_aide_packages }}'
+    state: present
+
+- name: Check if aide db file exists
+  stat:
+    path: '{{ role_aide_db }}'
+  register: check_aide_db_file
+
+- name: Initialize aide
+  block:
+    - name: Initialize aide if not done yet
+      command: /usr/sbin/aide --init
+
+    - name: Replace newly initiated aide db with existing aide db
+      command: /usr/bin/mv -f {{ role_aide_new }} {{ role_aide_db }}
+  when:
+    - not check_aide_db_file.stat.exists
+
+- name: Ensure the aide cronjob exists
+  cron:
+    name: aide
+    cron_file: aide
+    user: root
+    special_time: daily
+    job: /usr/sbin/aide --check
+
+...
